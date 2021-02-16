@@ -1,0 +1,15 @@
+name: disallow_default_namespace
+description: "...."
+policies:
+  -  disallow_default_namespace_policy.yaml
+resources:
+  -  disallow_default_namespace.yaml
+results:
+  - policy: disallow-default-namespace
+    rule: require-namespace
+    resource: myapp-pod
+    status: fail
+  - policy: disallow-default-namespace
+    rule: validate-namespace
+    resource: myapp-pod
+    status: fail
